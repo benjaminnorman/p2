@@ -17,6 +17,9 @@ The live Project one can be found here:
 [Live Project 2](p2.benorman.com)
 
 ###Other Details
+The word list came from a list of words I found online with approximately 52,000 words in the list. I use a built in php function, file(), to read this file.
+This function handily puts each word from the list into each entry in an array, which randomly pull words out of using a randomly generated number as the getter index.
+
 I utilized a nice radio button variation in which you can include a title in the button itself, and applied it to the capitalization selection.
 This way, the user cannot select more than one capitalization method and therefore cause an error or accidentally override their own choices.
 

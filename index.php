@@ -27,8 +27,13 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
     <div class="jumbotron" align="center">
         <h1>P@$$\/\/0rd G3n3r@t0r!</h1>
         <p>Generate a password using random words, special characters, and numbers!</p>
+        <p><b>1. Enter the number of words you would like in your password</b><br> (Limited to 2 to 6 words)</p>
+        <p><b>2. Enter your special characters and number preferences.</b>
+            <br>(You may enter 0-4 as values for how many numbers and special characters you would like in your password)</b></p>
+        <p><b>3. Select the capitalization you would like.</b><br>(You may choose from 'Capitalize Each Word', 'ALL UPPERCASE', or 'all lowercase')</p>
+
     </div>
-    <div class="form-group" align="center">
+       <div class="form-group" align="center">
         <form method='GET' action='logic.php'>
            <br><br>
             <div class="alert alert-info"><h3>Enter Number of Words: </h3></div>
@@ -38,7 +43,7 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
             <br>
             <br>
             <br>
-            <div class="bg-primary"><h3>Enter Options: </h3></div>
+            <div class="bg-primary"><h3>----------------Enter Options: ----------------</h3></div>
 
             <label>Number of Numbers <b>(Min 0, Max 4)</b>:<br>
                 <input type="text" name="numNums" class="form-control">
@@ -46,8 +51,9 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
 
             <label>Number of Special Characters <b>(Min 0, Max 4)</b>:<br>
                 <input type="text" name="numChars" class="form-control">
-            </label><br>
-
+            </label>
+            <br>
+            <br>
             <label>Capitalization Options:</label>
             <br>
             <div class="btn-group" data-toggle="buttons">
@@ -61,10 +67,10 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
                     <input type="radio" name="lowercase" id="lowercase" autocomplete="off"> Lowercase
                 </label>
             </div>
+            <div class="bg-primary"><h3>----------------------------------------------------</h3></div>
             <br>
             <br>
-            <br>
-            <br><input class="btn btn-primary" type='submit' value='Generate Password!'><br>
+            <br><input class="btn btn-primary btn-lg" type='submit' value='Generate Password!'><br>
         </form>
     </div>
     <div align="center">
@@ -74,6 +80,8 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
         <a href="http://xkcd.com/936/">
             <img class="comic" src="http://imgs.xkcd.com/comics/password_strength.png" alt="xkcd style passwords">
         </a>
+        <br>
+        <br>
     </div>
 </body>
 
