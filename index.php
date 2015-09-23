@@ -1,14 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Benjamin
- * Date: 9/18/2015
- * Time: 11:19 PM
- */
-
-
-
-//I FORGOT HOW TO WRITE IN PHP
 error_reporting(E_ALL);       # Report Errors, Warnings, and Notices
 ini_set('display_errors', 1); # Display errors on page (instead of a log file)
 ?>
@@ -41,15 +31,15 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
     <div class="form-group" align="center">
         <form method='GET' action='logic.php'>
            <br><br>
-            <div class="alert alert-info" role="alert"><h3>Enter Number of Words: </h3></div>
+            <div class="alert alert-info"><h3>Enter Number of Words: </h3></div>
             <label>Number of Words  <b>(Min 2, Max 6)</b>: <br>
                 <input type="text" name="numWords" class="form-control">
             </label>
             <br>
             <br>
             <br>
+            <div class="bg-primary"><h3>Enter Options: </h3></div>
 
-            <p class="bg-primary"><h3>Enter Options: </h3></p>
             <label>Number of Numbers <b>(Min 0, Max 4)</b>:<br>
                 <input type="text" name="numNums" class="form-control">
             </label><br><br>
@@ -58,18 +48,22 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
                 <input type="text" name="numChars" class="form-control">
             </label><br>
 
-            <label>Capitalize First Letter of Each Word:<br>
-                <input type="checkbox" name="capitalizeFirstLetter" class="form-control">
-            </label><br>
-
-            <label>All Uppercase:<br>
-                <input type="checkbox" name="uppercase" class="form-control">
-            </label><br>
-
-            <label>All Lowercase:<br>
-                <input type="checkbox" name="lowercase" class="form-control">
-            </label><br>
-
+            <label>Capitalization Options:</label>
+            <br>
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary active">
+                    <input type="radio" name="firstLetter" id="firstLetter" autocomplete="off" checked> First Letter of Each Word
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" name="uppercase" id="uppercase" autocomplete="off"> Uppercase
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" name="lowercase" id="lowercase" autocomplete="off"> Lowercase
+                </label>
+            </div>
+            <br>
+            <br>
+            <br>
             <br><input class="btn btn-primary" type='submit' value='Generate Password!'><br>
         </form>
     </div>

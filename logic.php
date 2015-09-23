@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Benjamin
- * Date: 9/19/2015
- * Time: 12:22 AM
- */
 
 //create empty vars
 $numWords = 0;
@@ -22,11 +16,11 @@ if(isset($_GET['numWords'])){
     if((2 <= $_GET['numWords']) && ($_GET['numWords'] <= 6)){
         $numWords = $_GET['numWords'];
     }
-    else echo $_GET['numWords'] . "You've made a big mistake!";
+    else echo "Please enter an integer between 2 and 6 for the number of words!";
 }
 
 //if the user wants any special chars, get the number of chars requested
-if(isset($_GET['numWords'])) {
+if(isset($_GET['numChars'])) {
     $numChars = $_GET['numChars'];
 }
 
@@ -39,7 +33,7 @@ if(isset($_GET['numNums'])) {
 $wordListLength = count($wordList);
 
 //call getRandomWord once for each word requested by the user via the numWords variable
-for($i = 0; $i < $numWords; $i++ ) {
+for($i = 0; $i <= $numWords; $i++ ) {
     $words[$i] =  $randomWord = getRandomWord($wordList, $wordListLength - 1);
 }
 
@@ -58,8 +52,12 @@ for($i = 0; $i < $numNums ; $i++){
     $password .= getRandomNum();
 }
 
+//call the setCapitalization() function to change the capitalization according to user input
+$password = setCapitalization($password);
+
 //remove all the spaces from the assembled password
 $password = preg_replace('/\s+/', '', $password);
+
 
 //print completed password!
 echo $password;
@@ -71,6 +69,20 @@ function getRandomWord($wordList, $wordListLength){
 
     //pick a word from the list according to what number was generated
     return $wordList[$randomWordNum];
+}
+
+function setCapitalization($password){
+    //capitalize all letters if asked
+    if(isset($_GET['uppercase'])){
+        $password = strtoupper($password);
+    }
+    elseif(isset($_GET['lowercase'])){
+        $password = strtolower($password);
+    }
+    elseif(isset($_GET['firstLetter'])){
+        $password = ucwords($password);
+    }
+    return $password;
 }
 
 function getRandomSymbol(){
