@@ -16,6 +16,9 @@ or to just include it in the main page, but I did not implement that for the sak
 The live Project one can be found here: 
 [Live Project 2](p2.benorman.com)
 
+The video presentation for this project can be found here:
+[Project 2 Vide](https://youtu.be/e1T6Woy3k3s)
+
 ###Other Details
 The word list came from a list of words I found online with approximately 52,000 words in the list. I use a built in php function, file(), to read this file.
 This function handily puts each word from the list into each entry in an array, which randomly pull words out of using a randomly generated number as the getter index.
