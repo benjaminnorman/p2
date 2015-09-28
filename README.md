@@ -14,7 +14,7 @@ or to just include it in the main page, but I did not implement that for the sak
 
 ###Live URL
 The live Project one can be found here: 
-[Live Project 2](p2.benorman.com)
+[Live Project 2](http://p2.benorman.com)
 
 The video presentation for this project can be found here:
 [Project 2 Vide](https://youtu.be/e1T6Woy3k3s)
